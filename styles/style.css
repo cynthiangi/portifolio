@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root { /*pseudo-classe para declarar variaveis*/
+    /*variaveis são declaradas da forma abaixo*/
+    --cor-primaria: #000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #f62dae;
+    --cor-destaque: #ff80ee;
+    --cor-hover: #272727;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; propriedade que diz que o conteudo ocupará 100% do viewport(tela) */
+    box-sizing: border-box; /*garante que os demais componentes não saiam do tamanho do body*/
+    /* width: 100%; */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{ 
+    padding: 2% 0% 0% 18%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-destaque);
+
+}
+
+.apresentacao {
+    padding: 6% 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    color: var(--cor-secundaria);
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    
+}
+
+.titulo-destaque {
+    color: var(--cor-destaque);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    
+}
+
+.texto-destaque {
+    color: var(--cor-destaque);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background-color: none;
+    border: 1px solid var(--cor-terciaria);
+    color: var(--cor-destaque);
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    padding: 16px 0;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-hover);
+    border: 1px solid var(--cor-secundaria);
+    cursor: progress;
+}
+
+.apresentacao__imagem {
+    width: 50%;
+    border: 1px groove var(--cor-terciaria);
+    border-radius: 16px;
+}
+
+.rodape {
+    color:var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px 0;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Media Queries define uma condição para alterar a configuração do css*/
+@media (max-width: 1200px) {
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
