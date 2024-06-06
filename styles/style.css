@@ -84,6 +84,16 @@ body {
     color: var(--cor-destaque);
 }
 
+.apresentacao__conteudo__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.2rem;
+}
+
+.apresentacao__conteudo__descricao{
+    font-family: var(--fonte-secundaria);
+    font-size: 0.8rem;
+}
+
 .apresentacao__links {
     display: flex;
     flex-direction: column;
